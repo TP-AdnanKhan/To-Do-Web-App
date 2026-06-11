@@ -1,0 +1,218 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  /* LIGHT MODE - Adjusted for text visibility */
+  --clrbcklight: #F1F5F9;      /* Soft, muted gray background */
+  --clrbckdark: #0F172A;       
+  --txtclrlight: #1E293B;      /* High-contrast dark text */
+  --txtclrdark: #F1F5F9;       
+  --lnkbtnlight: #4F46E5;      
+  --lnkbtndark: #6366F1;       
+  --brdrlight: #94A3B8;        /* Slightly darker border for crisp definition */
+  --brdrdark: #334155;         
+  --effectlight: #E2E8F0;      /* Muted light gray for buttons/inputs */
+  --effectdark: #1E293B;       
+  --hvreffectlight: #CBD5E1;   /* Darker gray hover background so text stays visible */
+  --hvreffectdark: #2D3748;    
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--clrbcklight);
+  color: var(--txtclrlight);
+}
+
+.outermost {
+  margin: auto;
+  width: 800px;
+  position: relative;
+}
+
+header h1 {
+  margin-top: 40px;
+  margin-bottom: 25px;
+  width: 100%;
+  margin-left: 40%;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+#searchbar {
+  cursor: pointer;
+  padding: 7px 70px 7px 32px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-size: 16px;
+  border: 2px solid var(--brdrlight);
+  background-color: var(--effectlight);
+}
+
+#searchbar::placeholder {
+  color: var(--txtclrlight);
+}
+
+.search-div i {
+  position: absolute;
+  top: 74px;
+  left: 164px;
+  pointer-events: none;
+  color: #64748B;
+}
+
+.search-div i {
+  color: var(--txtclrlight)
+}
+
+#searchbar:active {
+  color: var(--txtclrdark);
+  border-color: var(--brdrlight);
+}
+
+#searchbar:hover {
+  background-color: var(--hvreffectlight);
+  color: var(--txtclrlight);
+}
+
+.status {
+  cursor: pointer;
+  color: var(--txtclrlight);
+  border: 2px solid var(--brdrlight);
+  border-radius: 6px;
+  padding: 7px 6px 7px 4px;
+  font-size: var(--fntsz);
+  font-weight: 500;
+  background-color: var(--effectlight);
+}
+
+.status:active {
+  border: var(--brdrlight);
+  color: var(--txtclrlight);
+  background-color: var(--hvreffectlight);
+}
+
+.status:hover {
+  background-color: var(--hvreffectlight);
+  color: var(--txtclrlight);
+}
+
+.cg-mode {
+  cursor: pointer;
+  font-size: 16px;
+  border: 2px solid var(--brdrlight);
+  border-radius: 6px;
+  padding: 7px 15px 7px 15px;
+  background-color: var(--effectlight);
+}
+
+.cg-mode:active,
+.cg-mode:hover {
+  background-color: var(--hvreffectlight);
+  color: var(--txtclrlight);
+}
+
+nav {
+  width: 800px;
+}
+
+main {
+  position: relative;
+}
+
+.addNote {
+  cursor: pointer;
+  position: fixed;
+  bottom: 30px;
+  right: 350px;
+  border: 2px solid var(--brdrlight);
+  border-radius: 100%;
+  padding: 10px 14px 10px 14px;
+  font-size: 200%;
+  color: var(--txtclrlight);
+  background-color: var(--effectlight);
+}
+
+.addNote:hover,
+.addNote:active {
+  background-color: var(--hvreffectlight);
+  color: var(--txtclrlight);
+}
+
+.maindiv {
+  width: 600px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.task-row{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.check-label {
+  word-break: break-all;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--txtclrlight);
+  cursor: pointer;
+  width: 500px;
+  position: relative;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  accent-color: var(--effectlight);
+  min-width: 20px;
+  min-height: 20px;
+  margin-right: 15px;
+}
+
+.edit-task {
+  margin-left: 10px;
+  min-height: 25px;
+  min-width: 25px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--effectlight);
+  cursor: pointer;
+}
+
+.edit-task:hover,
+.edit-task:active{
+  background-color: var(--lnkbtnlight);
+  color: var(--txtclrdark);
+}
+
+.ruler{
+  margin-left: 4px;
+  border: 1px solid var(--brdrlight);
+  margin-top: 8px;
+}
+
+.hidden-one{
+  display: none;
+}
+
+.hide{
+  display: none;
+}
+
+.checked{
+  cursor: pointer;
+}
+
+.unchecked{
+  cursor: pointer;
+}
