@@ -2,7 +2,7 @@
 
 A clean, easy-to-use To-Do list web application that I built from scratch. This project handles daily tasks and features a custom-built Light and Dark mode toggle switch.
 
-🔗 **[Live Interactive Demo](PASTE_YOUR_LIVE_GITHUB_PAGES_LINK_HERE)**
+🔗 **[Live Interactive Demo](https://tp-adnankhan.github.io/To-Do-Web-App/)**
 
 ---
 
