@@ -1,85 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TODO WEB APP</title>
-    <link rel="stylesheet" href="to-do3.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>To-Do App</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="container">
+      <h1>TO DO LIST</h1>
+      <div class="searchbar">
+        <input type="text" placeholder="Title goes here" id="search" />
+        <select class="filter">
+          <option value="all">ALL</option>
+          <option value="active">ACTIVE</option>
+          <option value="completed">COMPLETED</option>
+        </select>
 
-    <header class="outermost">
-      <div class="outer1">
-        <h1>TODO LIST</h1>
-
-        <nav>
-          <div class="search-div">
-            <i class="fa fa-search"></i>
-            <input type="text" id="searchbar" placeholder="Search here..." />
-          </div>
-          <select name="status" class="status">
-            <option value="all">All</option>
-            <option value="complete">Complete</option>
-            <option value="incomplete">Incomplete</option>
-          </select>
-          <button class="cg-mode ">
-            <i class="fa-notdog fa-solid fa-sun"></i>
-          </button>
-        </nav>
-      </div>
-    </header>
-
-    <main class="outer2">
-      <div class="maindiv">
-
-        <div class="hidden-one">
-        <label class="check-label">
-          <input type="checkbox" class="progress" />
-          <span class="task-description">Hidden !poof!</span>
-        </label>
-        <span class="editspan">
-          <button class="edit-task edt"><i class="fa-solid fa-pencil"></i></button>
-          <button class="edit-task del"><i class="fa-solid fa-trash"></i></button
-        ></span>
+        <button class="mode dark">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="mode light hide">
+          <i class="fa-solid fa-sun"></i>
+        </button>
       </div>
 
-        <div class="task-row">
-        <label class="check-label">
-          <input type="checkbox" class="progress" />
-          <span class="task-description unchecked">Hello1aaaaaaaaaaaaaaaaaaaaaa</span>
-        </label>
-        <span class="editspan">
-          <button class="edit-task edt"><i class="fa-solid fa-pencil"></i></button>
-          <button class="edit-task del"><i class="fa-solid fa-trash"></i></button
-        ></span>
-      </div>
-        <hr class="ruler">
+      <!-- <i class="fa-solid fa-plus"></i> -->
+    </div>
+<!-- ------------------------------------start of item------------------------------------------ -->
+    <div class="item hide">
+      <!-- hidden item to help append new items -->
+      <span class="tickStatus">
+        <button class="tickbox notick">
+          <i class="fa-regular fa-square"></i>
+        </button>
+        <button class="tickbox tick hide">
+          <i class="fa-solid fa-square-check"></i></button
+      ></span>
 
-        <div class="task-row">
-        <label class="check-label">
-          <input type="checkbox" class="progress" />
-          <span class="task-description unchecked">Hello1bbbbbaaaaaaaa</span>
-        </label>
-        <span class="editspan">
-          <button class="edit-task edt"><i class="fa-solid fa-pencil"></i></button>
-          <button class="edit-task del"><i class="fa-solid fa-trash"></i></button
-        ></span>
-        </div>
-        <hr class="ruler">
+      <span class="text">Easter EGG</span>
 
-        <button class="addNote"><i class="fa-solid fa-plus"></i></button>
-      </div>
-    </main>
-    <script src="to-do3.js"></script>
+      <span class="edbtn">
+        <button class="edit"><i class="fa-solid fa-pencil"></i></button>
+        <button class="trash"><i class="fa-solid fa-trash"></i></button>
+      </span>
+    </div>
+<!-- -------------------------------------End of item------------------------------------------------->
+
+    <div class="inputInfo hide">
+      <input type="text" id="inputText" placeholder="Enter text here..." />
+      <button class="confirm">Confirm</button>
+    </div>
+
+    <div class="editInfo hide">
+      <input type="text" id="inputEdited" placeholder="Modify the task" />
+      <button class="confirmModification">Confirm</button>
+    </div>
+    <button class="create"><i class="fa-solid fa-plus"></i></button>
+
+    <script src="script.js"></script>
   </body>
 </html>
