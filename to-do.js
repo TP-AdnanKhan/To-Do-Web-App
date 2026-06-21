@@ -200,5 +200,3 @@ search.addEventListener("input",()=>{
     }
   });
 });
-
-alert("js is working");
