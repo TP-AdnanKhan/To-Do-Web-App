@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--Back);
+  color: var(--Text);
+  overflow: hidden;
+}
+
+:root {
+  --Back: #E7EAF3;
+  --Card: #F1F3F9;
+  --Primary: #4F46E5;
+  --Secondary: #6366F1;
+  --Text: #1E293B;
+  --MutedText: #64748B;
+  --Border: #c2c3c3;
+  --Success: #22C55E;
+  --Danger: #FB7185;
+  --scroll: #aaa;
+}
+
+.container {
+  border: 1px solid var(--Border);
+  background-color: var(--Card);
+  border-radius: 4px;
+  margin: 150px auto;
+  max-width: 40%;
+  min-width: 530px;
+  height: 500px;
+  overflow-y: auto;
+}
+
+.container::-webkit-scrollbar { /*used to style scrollbar's width*/
+  width: 6px;
+}
+.container::-webkit-scrollbar-thumb {
+  background-color:#aaa;
+  border-radius: 8px;
+}
+
+
+h1 {
+  text-align: center;
+  margin: 20px 0 20px 0;
+  color: var(--Primary);
+}
+
+.searchbar {
+  background-color: var(--Card);
+  border-bottom: 1px solid var(--Border);
+  text-align: center;
+  margin-bottom: 20px;
+  padding:20px 15px 25px;
+
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.searchbar input[type="text"] {
+  font-size: 1rem;
+  height: 27px;
+  width: 290px;
+  background-color: var(--Card);
+  color: var(--Text);
+  border: 1px solid var(--Border);
+  padding-left: 8px;
+}
+
+input::placeholder{
+  color: var(--MutedText);
+}
+
+.searchbar select {
+  background-color: var(--Card);
+  color: var(--Text);
+  border: 1px solid var(--Border);
+  font-size: 0.8rem;
+  height: 31px;
+  padding-left: 4px;
+  cursor: pointer;
+}
+
+.mode {
+  height: 30px;
+  width: 30px;
+  font-size: 1.15rem;
+  border-radius: 4px;
+  border: 1px solid var(--Border);
+  color: var(--Text);
+  background-color: var(--Card);
+  cursor: pointer;
+}
+
+.item {
+  background-color: var(--Card);
+  color: var(--Text);
+  border: 1px solid var(--Border);
+  width: 70%;
+  margin: auto;
+  height: 30px;
+  padding: 10px 17px;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.tickbox,
+.edit,
+.trash {
+  height: 25px;
+  width: 25px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: var(--Card);
+  cursor: pointer;
+}
+
+.edit {
+  margin-right: 7px;
+  color: var(--Primary);
+}
+
+.trash{
+  color:var(--Danger);
+}
+
+.tickbox{
+  color: var(--Success);
+}
+
+.text {
+  font-size: 1.1rem;
+  color: var(--Text);
+  overflow: hidden;
+  flex:1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.item:not(.hide):not(:last-child) {
+  border-bottom: 1px solid var(--Border);
+}
+
+.create {
+  background-color: var(--Primary);
+  color: white;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.7rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.create:hover{
+  background-color: var(--Secondary);
+}
+
+.inputInfo,
+.editInfo {
+  height: 130px;
+  width: 300px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow:0 10px 25px regba(0,0,0,0.15);
+  background-color: var(--Card);
+  border: 1px solid var(--Border);
+  border-radius: 12px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*shifts it back by half its own size*/
+}
+
+.inputInfo input,
+.editInfo input {
+  font-size: 1.2rem;
+  width: 80%;
+  height: 35px;
+  padding-left: 8px;
+  margin-bottom: 20px;
+  border: 1px solid var(--Border);
+  color: var(--Text);
+  background: var(--Card);
+}
+
+.confirm,
+.confirmModification {
+  height: 32px;
+  width: 90px;
+  font-size: 1.05rem;
+}
+
+.hide {
+  display: none;
+}
+
+.strike{
+  text-decoration: line-through;
+  color: var(--MutedText);
+}
