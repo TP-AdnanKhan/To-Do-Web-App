@@ -8,14 +8,13 @@ A simple and interactive To-Do application built using HTML, CSS and JavaScript.
 
 ## 🚀 Features
 
-- Add new tasks
-- Edit existing tasks
-- Delete tasks
-- Mark tasks as completed
-- Search tasks
-- Filter tasks (All / Active / Completed)
-- Dark and light mode
-- Responsive UI
+- ➕ Add new tasks
+- ✏️ Edit existing tasks
+- 🗑️ Delete tasks
+- ✅ Mark tasks as completed
+- 🔍 Search tasks
+- 🔽 Filter tasks (All / Active / Completed)
+- 🌙 Dark and light mode
 
 ## 📚 What I Learned
 
