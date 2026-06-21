@@ -6,7 +6,7 @@ A simple and interactive To-Do application built using HTML, CSS and JavaScript.
 
 ---
 
-## Features
+## 🚀 Features
 
 - Add new tasks
 - Edit existing tasks
@@ -17,7 +17,7 @@ A simple and interactive To-Do application built using HTML, CSS and JavaScript.
 - Dark and light mode
 - Responsive UI
 
-## What I Learned
+## 📚 What I Learned
 
 - DOM manipulation
 - Event listeners and event delegation
@@ -27,7 +27,7 @@ A simple and interactive To-Do application built using HTML, CSS and JavaScript.
 - Flexbox layouts
 - Handling user input
 
-## Tech Used
+## 🛠️ Tech Used
 
 - HTML
 - CSS
