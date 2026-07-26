@@ -213,7 +213,7 @@ input::placeholder{
   font-size: 1.05rem;
 }
 
-.hide {
+.hide, .easter-egg{
   display: none;
 }
 
